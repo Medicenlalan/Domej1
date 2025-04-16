@@ -1,0 +1,26 @@
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+button {
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  background-color: #008cff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #005fa3;
+}
+#mensaje {
+  display: none;
+  margin-top: 10px;
+  color: green;
+}
+ul {
+  margin-top: 10px;
+}

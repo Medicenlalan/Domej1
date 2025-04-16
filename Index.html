@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplos DOM</title>
+
+</head>
+<body>
+
+  <h1 id="titulo">Hola Mundo</h1>
+  <button onclick="cambiarTexto()">Cambiar texto</button>
+
+  <hr>
+
+  <button onclick="cambiarColor()">Cambiar color de fondo</button>
+
+  <hr>
+
+  <button onclick="mostrar()">Mostrar mensaje oculto</button>
+  <p id="mensaje">¡Hola! Este mensaje estaba oculto.</p>
+
+  <hr>
+
+  <h3>Lista dinámica</h3>
+  <ul id="lista">
+    <li>Elemento 1</li>
+  </ul>
+  <button onclick="agregarElemento()">Agregar elemento</button>
+
+  <hr>
+
+  <h3>Contador de clics</h3>
+  <p>Has hecho clic <span id="contador">0</span> veces</p>
+  <button onclick="incrementar()">Haz clic</button>
+
+  <script>
+    function cambiarTexto() {
+      document.getElementById('titulo').textContent = "Texto cambiado con JavaScript";
+    }
+
+    function cambiarColor() {
+      document.body.style.backgroundColor = "#d1e7ff";
+    }
+
+    function mostrar() {
+      document.getElementById('mensaje').style.display = "block";
+    }
+
+    function agregarElemento() {
+      let nuevoItem = document.createElement("li");
+      nuevoItem.textContent = "Nuevo elemento";
+      document.getElementById("lista").appendChild(nuevoItem);
+    }
+
+    let contador = 0;
+    function incrementar() {
+      contador++;
+      document.getElementById('contador').textContent = contador;
+    }
+  </script>
+
+</body>
+</html>
